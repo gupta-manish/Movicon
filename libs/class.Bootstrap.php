@@ -31,6 +31,8 @@ class Bootstrap
         
         $con = new $con_name();
         
+        $con->loadModel($con_name);
+        
         if(isset($url[1]))
         {
             $con_func = $url[1];
