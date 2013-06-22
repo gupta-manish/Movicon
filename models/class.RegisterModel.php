@@ -30,6 +30,10 @@ class RegisterModel extends BaseModel{
                  ':pass'=>$this->encrypt($_POST['pass']),
                  ':firstName'=>$_POST['firstName'],
                  ':lastName'=>$_POST['lastName']));
+             
+             Session::start();
+            Session::set('loggedIn',TRUE);
+            header('Location:'.BASE_URL.'dashboard');
         }
     }
     

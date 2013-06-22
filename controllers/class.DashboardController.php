@@ -14,7 +14,7 @@ class DashboardController extends BaseController{
         if($session == FALSE)
         {
             Session::destroy();
-            header('Location:login');
+            header('Location:'.BASE_URL.'login');
             exit;
         }
     }
@@ -22,13 +22,13 @@ class DashboardController extends BaseController{
     public function loadPage()
     {
         $this->view = new ViewController();
-        $this->view->render("dashboard/index");
+        $this->view->render("dashboard");
     }
     
     public function logOut()
     {
          Session::destroy();
-         header('Location:'.URL.'login');
+         header('Location:'.BASE_URL.'login');
     }
 
 }

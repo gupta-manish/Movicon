@@ -31,7 +31,7 @@ class Bootstrap
         
         $con = new $con_name();
         
-        $con->loadModel($con_name);
+        $con->loadModel($url[0]);
         
         if(isset($url[1]))
         {
@@ -45,7 +45,7 @@ class Bootstrap
             
         if(isset($url[2]))
         {
-            if(function_exists($con,$con_func))
+            if(method_exists($con,$con_func))
             {
                 $con->$con_func($con_func_var);
             }
@@ -59,7 +59,7 @@ class Bootstrap
         {
             if(isset($url[1]))
             {
-                if(function_exists($con,$con_func))
+                if(method_exists($con,$con_func))
                 {
                     $con->$con_func();
                 }

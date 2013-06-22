@@ -22,12 +22,12 @@ class LoginModel extends BaseModel{
         {
             Session::start();
             Session::set('loggedIn',TRUE);
-            header('Location:'.URL.'dashboard');
+            header('Location:'.BASE_URL.'dashboard');
         }
         else 
         {
             Session::destroy();
-            header('Location:'.URL.'login');
+            header('Location:'.BASE_URL.'login');
         }
     }
     

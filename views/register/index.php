@@ -3,24 +3,29 @@
 <h2>Register</h2>
 
 <form action ="<?php echo BASE_URL;?>register/enter" method ="post">
-    <label>Email Id :</label><input type ="text" name ="emailId"><br>
-    <label class="control-label" for="password">Password</label>
-    <input type="password" name="pass" id="pass"
-    pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*).{8,}$" class="password" required 
-    data-validation-required-message=" You'll need a enter a password of at least 8 characters." 
-    data-validation-pattern-message="Must be at least 8 characters, with both numbers & letters.">
+    <label>Email Id :</label><input type ="email" name ="emailId" required><br>
+    <label  for="password">Password</label>
+    <input type="password" name="pass" id="pass" class="password" required >
 <br>
    <label class="control-label" for="pass2">Confirm&nbsp;Password</label>                    
     <input type="password" name="pass2" id="pass2" required 
-    class="password" 
-    data-validation-required-message="Password confirmation is required." 
-    data-validation-match-match="pass" 
-    data-validation-match-message="Make sure this matches the password you entered above." >
+    class="password" oninput="check(this)">
                             <br>
-    <label>First Name :</label><input type ="text" name ="firstName"><br>
-    <label>Last Name :</label><input type ="text" name ="lastName"><br>
+    <label>First Name :</label><input type ="text" name ="firstName" required><br>
+    <label>Last Name :</label><input type ="text" name ="lastName" required><br>
     <input type ="submit">
                                    
 </form>
 
-<a href ="<?php echo BASE_URL;?>register">Register Here</a>
+<script>
+function check(input) {
+  if (input.value != document.getElementById('pass').value) {
+    input.setCustomValidity('The two passwords must match.');
+  } else {
+    // input is valid -- reset the error message
+    input.setCustomValidity('');
+  }
+}
+</script>
+
+
