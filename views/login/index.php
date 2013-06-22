@@ -8,3 +8,5 @@
     <input type ="submit">
                                    
 </form>
+
+<a href ="<?php echo BASE_URL;?>register">Register Here</a>

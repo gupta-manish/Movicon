@@ -4,7 +4,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-class LoginModel extends MainModel{
+class LoginModel extends BaseModel{
 
     function __construct() {
         parent::__construct();
@@ -31,15 +31,6 @@ class LoginModel extends MainModel{
         }
     }
     
-    private function encrypt($str)
-    {
-        /* 
-         * change this function for
-         * better encryption
-         */ 
-        
-        return md5($str);
-    }
     
 }
 
