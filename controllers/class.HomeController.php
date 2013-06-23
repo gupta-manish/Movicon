@@ -14,7 +14,6 @@ class HomeController extends BaseController
     
      public function loadPage()
     {
-        $this->view = new ViewController();
         $this->view->msg = "this is home";
         $this->view->render('home');
     }

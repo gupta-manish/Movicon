@@ -21,7 +21,6 @@ class DashboardController extends BaseController{
     
     public function loadPage()
     {
-        $this->view = new ViewController();
         $this->view->render("dashboard");
     }
     

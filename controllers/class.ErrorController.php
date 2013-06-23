@@ -13,7 +13,6 @@ class ErrorController extends BaseController{
     
     public function loadErrorPage()
     {
-        $this->view = new ViewController();
         $this->view->msg = "This page doesn't exist";
         $this->view->render('error');
     }

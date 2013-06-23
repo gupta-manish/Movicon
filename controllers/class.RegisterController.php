@@ -13,7 +13,7 @@ class RegisterController extends BaseController{
     
     public function loadPage()
     {
-        $this->view = new ViewController();
+        
         $this->view->msg = "This is the Register Page";
         $this->view->render("register");
     }

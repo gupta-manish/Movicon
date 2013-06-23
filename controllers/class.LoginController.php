@@ -15,7 +15,6 @@ class LoginController extends BaseController{
     
     public function loadPage()
     {
-        $this->view = new ViewController();
         $this->view->msg = "This is the Login Page";
         $this->view->render("login");
     }

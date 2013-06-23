@@ -13,7 +13,7 @@ and open the template in the editor.
             <div class="width_100">
 			
 				<div class="top-main-content clearfix">
-                    <h1>Movicon</h1>
+                    <h1><?php echo WEBSITE_NAME; ?></h1>
                     <a href="<?php echo BASE_URL; ?>index">Index</a>
                     <?php if(Session::get('loggedIn') == TRUE): ?>
                         <a href="<?php echo BASE_URL; ?>dashboard/logout">LogOut</a>

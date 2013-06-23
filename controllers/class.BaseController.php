@@ -8,7 +8,7 @@ class BaseController {
 
     function __construct() 
     {
-        
+        $this->view = new ViewController();
     }
 
     function loadModel($name)
@@ -22,6 +22,8 @@ class BaseController {
             $this->model = new $modelname();
         }
     }
+    
+    
     
 }
 
